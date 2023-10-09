@@ -7,20 +7,26 @@
     <title>Footer</title>
     <style>
         body {
-            background-color: #F8F8F8;
+            background-color: #faf4f4;
             margin: 0px;
             font-family: 'Oswald', Arial, Helvetica, sans-serif;
             font-size: 20px;
             display: flex;
+            background-image: url(./images/nền_footer.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
         }
 
-        
+
 
         h2 {
-            margin-left: 20px;
+            
         }
 
-        .content-left ul {}
+        .content-left ul {
+            margin-left: 80px;
+        }
 
         .content-left ul li {
             text-transform: uppercasem;
@@ -29,7 +35,8 @@
         }
 
         #icon {
-            margin-left: 20px;
+            margin-left: 120px;
+            margin-bottom:20px ;
 
         }
 
@@ -38,32 +45,52 @@
         }
 
         #fb {
-            width: 5%;
-            height: 5%;
+            width: 6%;
+            height: 6%;
             margin-right: 5px;
         }
 
         #zalo {
-            width: 5%;
-            height: 5%;
+            width: 6%;
+            height: 6%;
             margin-right: 5px;
         }
 
         #ig {
-            width: 5%;
-            height: 5%;
+            width: 6%;
+            height: 6%;
             margin-right: 5px;
         }
 
         #tiktok {
-            width: 5%;
-            height: 5%;
+            width: 6%;
+            height: 6%;
             margin-right: 5px;
+        }
+        .table input {
+            margin-left: 60px;
         }
 
         .feedback {
-            background-color: rgb(228, 214, 214);
+            /* margin-top: 30px; */
+            width: 140vw;
+            /* height: 50vh; */
+            background-color: #c0a2a2;
         }
+        
+
+        #send-it {
+    
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: #8c8686;
+        }
+
+        
+
+        
     </style>
 </head>
 
@@ -77,7 +104,9 @@
                 <li>Nguyễn Văn Hoàn</li>
                 <li>Ngô Văn Quang</li>
             </ul>
-        <div id="icon">
+            <div>
+                <h2>Liên hệ:</h2>
+            <div id="icon">
                 <a href="https://www.facebook.com/profile.php?id=100040114293236">
                     <img id="fb" src="./images/fb.png" alt="FB">
                 </a>
@@ -90,32 +119,37 @@
                 <a href="">
                     <img id="tiktok" src="./images/tiktok.png" alt="tiktok">
                 </a>
-        </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="feedback">
-        <table>
+    <div class="feedback" style="text-align: center;">
+        <div>
+            <h2>Feedback</h2>
+        </div>
+        <table class="table">
             <tr>
                 <td>Name:</td>
                 <td>
-                    <input type="text" name="name" value="Your name">
+                    <input type="text" name="name" value="Your name" size="20" style="background-color: #c0a2a2;">
                 </td>
             </tr>
             <tr>
                 <td>Email:</td>
                 <td>
-                    <input type="email" name="" id="" value="email">
+                    <input type="email" name="" id="" value="email" size="20" style="background-color: #c0a2a2;">
                 </td>
             </tr>
             <tr>
-                <td>Messager:</td>
+                <td>Message:</td>
                 <td>
-                    <input type="text" name="" id="">
+                    <input type="text" value="feedback" size="20" style=" word-break: break-all; background-color:#c0a2a2 ;"  >
                 </td>
             </tr>
+
         </table>
-        <input type="submit" value="SEND IT" style="text-align: center;">
+        <input id="send-it" type="submit" onclick="SubmitEvent" value="SEND IT" style="text-align: center;">
     </div>
 
 </body>
