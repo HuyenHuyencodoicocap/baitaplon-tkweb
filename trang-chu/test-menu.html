@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Header</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Oswald', Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #F8F8F8;
+            boder:1px solid #e7d9d9;
+        }
+
+        header {
+
+            background-color: black;
+            text-align: right;
+            color: white;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        #header a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        nav {
+            background-color: #F8F8F8;
+        }
+
+        #main-menu {
+            display: flex;
+        }
+
+        nav #main-menu li a {
+            font-weight: 700;
+        
+            color: #272222;
+            text-decoration: none;
+            display: block;
+            padding: 20px 12px;
+            text-transform: uppercase;
+        }
+        nav #main-menu li a:first-child{
+            margin-left: 30px;
+        }
+        nav #main-menu li:last-child(6){
+            float: right;
+            
+        }
+
+        nav #main-menu li:hover a {
+            color: #c23616;
+            transition: all 0.3s;
+        }
+
+        li#input {
+        
+            text-align: right;
+            margin-left: 250px;
+            display: block;
+            float: right;
+            
+        }
+        input:hover{
+            background-color: #cecbca;
+            position: all 0.3;
+        }
+
+        #input input {
+            float: right;
+            padding: 12px 12px;
+            margin-top: 10px;
+            border: 1px solid #cac6c6;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        #toggle {
+            display: none;
+            background: #F8F8F8;
+            color: #4f4040;
+            text-align: left;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 660px) {
+            #main-menu {
+                flex-direction: column;
+                text-align: left;
+               
+            }
+            nav #main-menu li a{
+                padding: 15px ;
+                font-size: 12px;
+            }
+
+            #input input {
+            
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+
+            #toggle {
+                display: block;
+                margin-left: 5px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#toggle').click(function () {
+                $('nav').slideToggle();
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="">Đăng nhập</a> |
+        <a href="">Đăng ký</a>
+    </header>
+    <div id="menu">
+        <div id="toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="main-menu">
+                <li>
+                    <a href="">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="">Phim</a>
+                </li>
+                <li>
+                    <a href="">Lịch chiếu</a>
+                </li>
+                <li>
+                    <a href="">Giá Vé</a>
+                </li>
+
+                <li>
+                    <a href="">tin mới và ưu đãi</a>
+                </li>
+                <li id="input">
+                    <input text" placeholder="Tìm kiếm ....">
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>
