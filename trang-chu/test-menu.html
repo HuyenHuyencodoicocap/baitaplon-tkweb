@@ -16,9 +16,10 @@
             padding: 0px;
             font-family: 'Oswald', Arial, Helvetica, sans-serif;
         }
-        body{
+
+        body {
             background-color: #F8F8F8;
-            boder:1px solid #e7d9d9;
+            boder: 1px solid #e7d9d9;
         }
 
         header {
@@ -46,23 +47,26 @@
 
         #main-menu {
             display: flex;
+            background-color: #ae7789;
         }
 
         nav #main-menu li a {
             font-weight: 700;
-        
+
             color: #272222;
             text-decoration: none;
             display: block;
             padding: 20px 12px;
             text-transform: uppercase;
         }
-        nav #main-menu li a:first-child{
+
+        nav #main-menu li a:first-child {
             margin-left: 30px;
         }
-        nav #main-menu li:last-child(6){
+
+        nav #main-menu li:last-child(6) {
             float: right;
-            
+
         }
 
         nav #main-menu li:hover a {
@@ -71,14 +75,15 @@
         }
 
         li#input {
-        
+
             text-align: right;
             margin-left: 250px;
             display: block;
-            float: right;
-            
+
+
         }
-        input:hover{
+
+        input:hover {
             background-color: #cecbca;
             position: all 0.3;
         }
@@ -91,10 +96,14 @@
             width: 250px;
             font-size: 16px;
         }
+        div#toggle{
+            margin: 0px;
+        }
 
         #toggle {
+            
             display: none;
-            background: #F8F8F8;
+            background: #a37979;
             color: #4f4040;
             text-align: left;
             padding: 10px;
@@ -106,19 +115,22 @@
             #main-menu {
                 flex-direction: column;
                 text-align: left;
-               
+
             }
-            nav #main-menu li a{
-                padding: 15px ;
+
+            nav #main-menu li a {
+                padding: 12px;
                 font-size: 12px;
             }
 
+
             #input input {
-            
+
                 display: block;
                 text-align: left;
                 width: 100%;
-                margin: 0;
+                left: 0px;
+                margin-right: 50px;
                 padding: 14px;
             }
 
@@ -127,9 +139,17 @@
                 display: block;
                 margin-left: 5px;
             }
+            ul#main-menu li a:hover{
+                color: #e7d9d9;
+
+            }
 
             nav {
                 display: none;
+            }
+
+            .main-cotent {
+                display: flex;
             }
         }
     </style>
@@ -148,34 +168,35 @@
         <a href="">Đăng nhập</a> |
         <a href="">Đăng ký</a>
     </header>
-    <div id="menu">
-        <div id="toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav>
-            <ul id="main-menu">
-                <li>
-                    <a href="">Trang chủ</a>
-                </li>
-                <li>
-                    <a href="">Phim</a>
-                </li>
-                <li>
-                    <a href="">Lịch chiếu</a>
-                </li>
-                <li>
-                    <a href="">Giá Vé</a>
-                </li>
+        <div id="menu">
+            <div id="toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li>
+                        <a href="">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="">Phim</a>
+                    </li>
+                    <li>
+                        <a href="">Lịch chiếu</a>
+                    </li>
+                    <li>
+                        <a href="">Giá Vé</a>
+                    </li>
 
-                <li>
-                    <a href="">tin mới và ưu đãi</a>
-                </li>
-                <li id="input">
-                    <input text" placeholder="Tìm kiếm ....">
-                </li>
-            </ul>
-        </nav>
-    </div>
+                    <li>
+                        <a href="">tin mới và ưu đãi</a>
+                    </li>
+                    <li id="input">
+                        <input text" placeholder="Tìm kiếm....">
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
 
 </body>
 
