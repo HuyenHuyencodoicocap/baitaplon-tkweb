@@ -12,8 +12,6 @@
 
     <style>
         * {
-            margin: 0px;
-            padding: 0px;
             font-family: 'Oswald', Arial, Helvetica, sans-serif;
         }
 
@@ -47,7 +45,8 @@
 
         #main-menu {
             display: flex;
-            background-color: #ae7789;
+            margin: 0;
+            background-color:#FFE0E6;
         }
 
         nav #main-menu li a {
@@ -73,15 +72,22 @@
             color: #c23616;
             transition: all 0.3s;
         }
-
+        #search-2{
+            flex-basis: 200px;
+            width: 0;
+            
+        }
+/* 
         li#input {
 
             text-align: right;
             margin-left: 250px;
             display: block;
+            flex-grow: 1;
+            width: 0;
 
 
-        }
+        } */
 
         input:hover {
             background-color: #cecbca;
@@ -96,14 +102,15 @@
             width: 250px;
             font-size: 16px;
         }
-        div#toggle{
+
+        div#toggle {
             margin: 0px;
         }
 
         #toggle {
-            
+
             display: none;
-            background: #a37979;
+            /* flex-grow: 1; */
             color: #4f4040;
             text-align: left;
             padding: 10px;
@@ -111,6 +118,33 @@
             cursor: pointer;
         }
 
+        #top-nav{
+            display: flex;
+            background:#FFAEBD;
+            justify-content: space-between;
+            height: 0;
+            visibility: hidden;
+            
+        }
+        
+        #search-1{
+                font-size: 16px;
+                padding: 20px 12px;
+
+                /* border: none;
+                background: none;
+                border-bottom: black solid 1px; */
+                
+            }
+        #contain-search{
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            flex-grow: 1;
+        }
+        #header{
+            display: flex;
+        }
         @media screen and (max-width: 660px) {
             #main-menu {
                 flex-direction: column;
@@ -139,7 +173,8 @@
                 display: block;
                 margin-left: 5px;
             }
-            ul#main-menu li a:hover{
+
+            ul#main-menu li a:hover {
                 color: #e7d9d9;
 
             }
@@ -151,6 +186,11 @@
             .main-cotent {
                 display: flex;
             }
+            #top-nav{
+                height: initial;
+                visibility: visible;
+            }
+
         }
     </style>
     <script>
@@ -165,38 +205,44 @@
 <body>
 
     <header id="header">
+        <img src="./images/logo.png" alt="logo" style=" width: 40px; height: 40px;">
         <a href="">Đăng nhập</a> |
         <a href="">Đăng ký</a>
     </header>
-        <div id="menu">
+    <div id="menu">
+        <div id="top-nav">
             <div id="toggle">
                 <i class="fas fa-bars"></i>
             </div>
-            <nav>
-                <ul id="main-menu">
-                    <li>
-                        <a href="">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a href="">Phim</a>
-                    </li>
-                    <li>
-                        <a href="">Lịch chiếu</a>
-                    </li>
-                    <li>
-                        <a href="">Giá Vé</a>
-                    </li>
-
-                    <li>
-                        <a href="">tin mới và ưu đãi</a>
-                    </li>
-                    <li id="input">
-                        <input text" placeholder="Tìm kiếm....">
-                    </li>
-                </ul>
-            </nav>
-
+            <input id="search-2" text" placeholder="Tìm kiếm....">
+            
         </div>
+        <nav>
+            <ul id="main-menu">
+                <li>
+                    <a href="">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="">Phim</a>
+                </li>
+                <li>
+                    <a href="">Lịch chiếu</a>
+                </li>
+                <li>
+                    <a href="">Giá Vé</a>
+                </li>
+
+                <li>
+                    <a href="">tin mới và ưu đãi</a>
+                </li>
+                <li id="contain-search" style="flex-grow: 1;">
+                    <input id="search-1" type="search" placeholder="Tìm Kiếm...">
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
 
 </body>
 
