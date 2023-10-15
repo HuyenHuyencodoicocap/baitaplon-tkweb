@@ -7,7 +7,7 @@ a {
     text-decoration: none;
 }
 
-header {
+/* header {
     text-align: right;
     color: white;
     background-color: black;
@@ -19,9 +19,9 @@ nav img {
     border: 0;
     vertical-align: middle;
 
-}
+} */
 
-@media(min-width:506px) {
+/* @media(min-width:506px) {
     .logo {
         font-weight: 400;
         float: left;
@@ -45,7 +45,7 @@ nav img {
 header a {
     color: white;
 
-}
+} */
 
 nav {
     display: flex;
@@ -107,7 +107,7 @@ ul li a:hover {
 
 .main-content {
 
-    margin: 30px;
+    margin-left:50px;
 }
 
 h2 {
